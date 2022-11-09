@@ -1,7 +1,7 @@
 # 🎊 2021-2학기 동아리 홍보전 🦁
-<img src="https://user-images.githubusercontent.com/63850508/200763096-8b507101-82db-4727-9ad1-fa7247996b54.jpg" height="400" align="left"/>
-<img src="https://user-images.githubusercontent.com/63850508/200764192-53faeedc-fd0b-4fd8-9237-005dc1d2d250.jpg" height="400" align="right"/>
-<p align="center"><img src="https://user-images.githubusercontent.com/63850508/200763743-0ac11804-8586-4ba8-85e0-82a32f959700.jpg" height="400"/></p>
+<img src="https://user-images.githubusercontent.com/63850508/200763096-8b507101-82db-4727-9ad1-fa7247996b54.jpg" width="30%" align="left"/>
+<img src="https://user-images.githubusercontent.com/63850508/200764192-53faeedc-fd0b-4fd8-9237-005dc1d2d250.jpg" width="30%" align="right"/>
+<p align="center"><img src="https://user-images.githubusercontent.com/63850508/200763743-0ac11804-8586-4ba8-85e0-82a32f959700.jpg" width="30%"/></p>
 
 > 교내 동아리를 가입하고 싶지만 어떤 동아리가 있는지 잘 모르는 학우들을 위해 삼육대 중앙동아리를 모두 모아 소개하고 지원까지 가능한 서비스를  Likelion at SYU 9기와 삼육대 동아리연합회가 함께 기획하여 서비스를 제작했습니다.
 
