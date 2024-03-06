@@ -25,7 +25,7 @@
           <div>
             <img class="admin_login" src="{% static 'admin_login.png' %}">
         {% if not user.is_authenticated %}
-          <h4><a href="{% url 'loginhtml' %}">관리자로 로그인하기</a></h4></div>
+          <h4><a href="{% url 'login' %}">관리자로 로그인하기</a></h4></div>
         {% endif %}
         {% if user.is_authenticated %}
           <span>반갑습니다.<br><sapn class="user_name">{{user.username}}</sapn>님!</span></div>
