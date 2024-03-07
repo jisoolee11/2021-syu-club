@@ -3,6 +3,15 @@ from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
+from django.urls import reverse_lazy
+from django.views.generic.edit import CreateView
+from .forms import SignUpForm
+
+
+class SignUpView(CreateView):
+    form_class = SignUpForm
+    success_url = reverse_lazy('home1') 
+    template_name = 'accounts/signup.html'
 
 
 def user_login(request):

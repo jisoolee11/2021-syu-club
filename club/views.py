@@ -1,21 +1,21 @@
 from django.shortcuts import render, get_object_or_404
-from base.models import *
+from .models import *
 from django.db.models import Q
 import operator
 from datetime import datetime
 
 def home1(request):
     template_name='main.html'
-    club_list = Clubs.objects.all().order_by('?')
+    club_list = Club.objects.all().order_by('?')
     #  사이드메뉴 (문화 학술 봉사)
-    side_menu1 = Clubs.objects.all().filter(club_type = 1)
-    side_menu2 = Clubs.objects.all().filter(club_type = 2)
-    side_menu3 = Clubs.objects.all().filter(club_type = 3)
+    side_menu1 = Club.objects.all().filter(club_type = 1)
+    side_menu2 = Club.objects.all().filter(club_type = 2)
+    side_menu3 = Club.objects.all().filter(club_type = 3)
             
     # 검색어 유
     if request.GET.get("keyword"):
         keyword = request.GET.get("keyword")
-        club_list = Clubs.objects.filter(Q(club_name__icontains = keyword)).distinct()
+        club_list = Club.objects.filter(Q(club_name__icontains = keyword)).distinct()
         # return render(request, 'club/home.html', {'club_list': club_list})
     # 검색어 무
     # else:
@@ -46,18 +46,18 @@ def haksool(request, club_type):
         template_name = 'club_list3.html'      
     
     # 사이드메뉴 (문화 학술 봉사)
-    side_menu1 = Clubs.objects.all().filter(club_type = 1)
-    side_menu2 = Clubs.objects.all().filter(club_type = 2)
-    side_menu3 = Clubs.objects.all().filter(club_type = 3)
+    side_menu1 = Club.objects.all().filter(club_type = 1)
+    side_menu2 = Club.objects.all().filter(club_type = 2)
+    side_menu3 = Club.objects.all().filter(club_type = 3)
 
 # Create your views here.
 
     # 검색어 유
     if request.GET.get("keyword"):
         keyword = request.GET.get("keyword")
-        club_list = Clubs.objects.all().filter(Q(club_type = club_type) & (Q(club_name__icontains = keyword)))
+        club_list = Club.objects.all().filter(Q(club_type = club_type) & (Q(club_name__icontains = keyword)))
         return render(request, template_name, {'club_list': club_list, 'club_type': club_type, 'side_menu1':side_menu1, 'side_menu2':side_menu2, 'side_menu3':side_menu3})
     # 검색어 무
     else:
-        club_list = Clubs.objects.all().filter(club_type = club_type).order_by('club_name')
+        club_list = Club.objects.all().filter(club_type = club_type).order_by('club_name')
         return render(request, template_name, {'club_list': club_list, 'club_type': club_type, 'side_menu1':side_menu1, 'side_menu2':side_menu2, 'side_menu3':side_menu3})
