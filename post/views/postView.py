@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
+from club.models import Club
 from base.models import *
 
 
 def home(request, club_id):
     # posts = Posts.objects.get()
     posts = Posts.objects.filter(club_id=club_id)
-    club = Clubs.objects.get(club_id=club_id)
+    club = Club.objects.get(club_id=club_id)
     return render(request, 'post/home.html', {'posts':posts, 'club_id':club_id, 'club':club})
 
 def detail(request, club_id, id):

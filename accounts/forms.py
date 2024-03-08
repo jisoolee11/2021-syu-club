@@ -18,5 +18,5 @@ class SignUpForm(UserCreationForm):
             user.save()
             club_name = self.cleaned_data.get('club_name')
             club_type = self.cleaned_data.get('club_type')
-            Club.objects.create(name=club_name, club_type=club_type, owner=user)
+            Club.objects.create(club_name=club_name, club_type=club_type, club_owner=user)
         return user

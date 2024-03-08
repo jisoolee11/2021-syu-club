@@ -10,8 +10,8 @@ class ClubType(models.Model):
 
 
 class Club(models.Model):
-    name = models.CharField(max_length=100)
-    owner = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='owner')
+    club_name = models.CharField(max_length=100)
+    club_owner = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='owner')
     club_type = models.ForeignKey(ClubType, on_delete=models.CASCADE)
     
     def __str__(self):

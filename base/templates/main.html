@@ -194,7 +194,7 @@
       </p>
 
       <!-- 검색 -->
-      <form action="{% url 'home1' %}" method="GET">
+      <form action="{% url 'main_home' %}" method="GET">
         <div class="search-bar">
           <input class="search"
             type="search"
@@ -228,7 +228,7 @@
       {% if club_list %} {% for club in club_list %}
       <!-- card -->
 
-      <a href="{% url 'home' club.club_id %}" class="card_a">
+      <a href="{% url 'home' club.id %}" class="card_a">
         <div class="card" style="border-radius: 10px; border: none">
           {% if club.main_club == 1 %}
             <img

@@ -3,7 +3,7 @@ from django.urls import path, include
 from club import views
 
 urlpatterns = [
-    path('', views.home1, name="home1"),
-    path('<int:club_type>', views.haksool, name="haksool"),
+    path('', views.main_home, name='main_home'),
+    path('<int:club_type>/', views.main_type, name='main_type'),
     path('post/<int:club_id>/', include('post.urls')),
 ]

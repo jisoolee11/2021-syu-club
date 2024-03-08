@@ -137,7 +137,7 @@
       <i class="fas fa-search"></i>
     </div><br><br> -->
 
-      <form action="{% url 'haksool' club_type %}" method="GET">
+      <form action="{% url 'main_type' club_type %}" method="GET">
         <div class="search-bar">
           <input
             type="search"
@@ -155,7 +155,7 @@
       {% for club in club_list %}
       <!-- card -->
 
-    <a href="{% url 'home' club.club_id %}" class="card_a">
+    <a href="{% url 'home' club.id %}" class="card_a">
       <div class="card" style="border-radius: 10px; border: none">
         {% if club.main_club == 1 %}
           <img
